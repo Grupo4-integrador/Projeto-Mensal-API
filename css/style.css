@@ -28,7 +28,7 @@ aside {
 }
 
 /*lado direito, conteudo*/
-article {
+#games-list {
     height: 100vh;
     float: center;
 }
