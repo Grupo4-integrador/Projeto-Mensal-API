@@ -1,5 +1,7 @@
+// Pega a section do html que irá conter os cards dos jogos.
 let gamesList = document.getElementById('games-list');
 
+// Coloca o método "GET" e a chave de acesso a API em uma const.
 const options = {
 	method: 'GET',
 	headers: {
@@ -8,6 +10,7 @@ const options = {
 	}
 };
 
+// função que cria o card dos jogos usando o conteúdo da struct recebida da API
 function createCard(data) {
     let gameCard = document.createElement('article');
     gameCard.innerHTML = `
@@ -21,13 +24,15 @@ function createCard(data) {
     gamesList.appendChild(gameCard);
 }
 
-function searchInApi() {
-    fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=alphabetical', options)
+// função que acessa a API
+function searchInApi() { // como exemplo, está buscando por popularidade e 
+                         // para todas as plataformas(pc e browser)
+    fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=popularity&platform=all', options)
         .then((response) => {
-            response.json()
-                .then(data => createCard(data));
-        })
+            response.json()                  // se der certo, recebe a struct
+            .then(data => createCard(data)); // com os dados dos jogos, e chama
+        })                                   // a função que cria os cards.              
         .catch(() => alert("Houve algum erro!"));
-}
+}       // se der errado, exibe mensagem de erro na tela.
 
 searchInApi();
