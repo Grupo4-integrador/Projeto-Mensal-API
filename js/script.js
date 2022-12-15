@@ -109,6 +109,7 @@ function createCard(data) {
     gameCard.id = "game_card";
     gameCard.innerHTML = `
           <div id="content">
+          
             <a href="${data[i].game_url}" target="blank">
             <img
               id="thumbnail"
