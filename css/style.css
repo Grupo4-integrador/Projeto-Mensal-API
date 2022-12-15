@@ -34,8 +34,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #fefeff;
+    
   }
   
   nav {
@@ -102,13 +103,13 @@ aside ul {
   
   .side_radio label {
     width: 150px;
-    height: 48px;
+    height: 64px;
   
     display: flex;
     align-items: center;
     justify-content: space-around;
   
-    font-size: 1em;
+    font-size: 1.3em;
     color: #fefeff;
     
     border: none;
@@ -179,7 +180,7 @@ aside ul {
 #game_card:first-child #thumbnail {
   width: 600px;
   height: 350px;
-  padding-top: 10px;
+  margin-top: 5px;
 }
 
 #game_card{
@@ -282,4 +283,22 @@ aside ul {
   background: transparent;
     border: none !important;
     font-size:0;
+}
+
+/* FOOTER */
+
+#footer {
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1/7;
+
+  background: var(--header-footer-color);
+}
+
+#footer h1 {
+  font-size: 1.3em;
 }
