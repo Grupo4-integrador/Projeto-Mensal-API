@@ -191,6 +191,7 @@ aside ul {
   border-radius: 20px;
   border-style: solid;
   border-color: #6238a9;
+  opacity: 0.8;
 }
 
 #game_info {
