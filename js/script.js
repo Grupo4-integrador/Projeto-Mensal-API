@@ -70,7 +70,7 @@ socialButton.addEventListener("click", function () {
   changeCategory("category=social");
 });
 sportButton.addEventListener("click", function () {
-  changeCategory("category=sport");
+  changeCategory("category=sports");
 });
 strategyButton.addEventListener("click", function () {
   changeCategory("category=strategy");
@@ -122,7 +122,7 @@ function createCard(data) {
             <button type="checkbox" id="fav_${
               data[i].id
             }" class="fav_btn" onclick="saveFav(${data[i].id})"></button>
-            <label for="fav_${data[i].id}">&#x1F90D;</label>
+            <label for="fav_${data[i].id}">&#9734;</label>
           </div>
           <div id="game_type">
             <p id="genre">${data[i].genre}</p>
