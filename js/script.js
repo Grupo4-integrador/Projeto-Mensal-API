@@ -70,16 +70,13 @@ socialButton.addEventListener("click", function () {
   changeCategory("category=social");
 });
 sportButton.addEventListener("click", function () {
-  changeCategory("category=sport");
+  changeCategory("category=sports");
 });
 strategyButton.addEventListener("click", function () {
   changeCategory("category=strategy");
 });
 
-
 let listCounting = 0;
-let loadButton = document.getElementById("load_button");
-loadButton.addEventListener("click", loadGames);
 
 function loadGames() {
   searchInApi(currentUrl);
@@ -134,26 +131,18 @@ function createCard(data) {
       `;
     gamesList.appendChild(gameCard);
   }
-
   listCounting += 10;
   let loadbtn = document.createElement("button");
   loadbtn.id = "load_button";
-
   loadbtn.addEventListener("click", loadGames);
-
   loadbtn.addEventListener("click", () =>{
-    loadbtn.style.display = 'none';
+    gamesList.removeChild(loadbtn);
   });
-
   loadbtn.innerHTML = `
       Carregar mais
     `;
-
   gamesList.appendChild(loadbtn);
-  
 }
-
-
 
 // função que acessa a API
 function searchInApi(currentUrl) {
