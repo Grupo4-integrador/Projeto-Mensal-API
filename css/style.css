@@ -275,3 +275,10 @@ aside ul {
 ::-webkit-scrollbar {
   display: none;
 }
+
+
+.fav_btn {
+  background: transparent;
+    border: none !important;
+    font-size:0;
+}
