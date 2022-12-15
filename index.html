@@ -1,18 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Free'Ragoon Games</title>
-</head>
-<body>
-    <header></header>
-    <aside></aside>
-    <section id="games-list"></section>
-    <footer></footer>
+  </head>
+
+  <body onload="loadGames()">
+    <header>
+      <h1>Free’Ragoon Games</h1>
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_radio">
+            <input type="radio" name="top_radio" id="all" checked /><label
+              for="all"
+              >All</label
+            >
+          </li>
+          <li class="nav_radio">
+            <input type="radio" name="top_radio" id="windows" /><label
+              for="windows"
+              >PC</label
+            >
+          </li>
+          <li class="nav_radio">
+            <input type="radio" name="top_radio" id="browser" /><label
+              for="browser"
+              >Browser</label
+            >
+          </li>
+          <li class="nav_radio">
+            <input type="radio" name="top_radio" id="favorite" /><label
+              for="favorite"
+              >Favorites</label
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+      <ul>
+        <li class="side_radio">
+          <input id="home" name="side_radio" type="radio" checked /><label
+            for="home"
+          >
+            <img id="li_img" src="./assets/home-icon.svg" alt="Home icon" />
+            <p>Home</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="anime" name="side_radio" type="radio" /><label for="anime">
+            <img id="li_img" src="./assets/anime-icon.svg" alt="Anime icon" />
+            <p>Anime</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="fantasy" name="side_radio" type="radio" /><label
+            for="fantasy"
+          >
+            <img
+              id="li_img"
+              src="./assets/fantasy-icon.svg"
+              alt="Fantasy icon"
+            />
+            <p>Fantasy</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="MMORPG" name="side_radio" type="radio" /><label
+            for="MMORPG"
+          >
+            <img id="li_img" src="./assets/mmorpg-icon.svg" alt="MMORPG icon" />
+            <p>MMORPG</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="racing" name="side_radio" type="radio" /><label
+            for="racing"
+          >
+            <img id="li_img" src="./assets/racing-icon.svg" alt="Racing icon" />
+            <p>Racing</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="sci-fi" name="side_radio" type="radio" /><label
+            for="sci-fi"
+          >
+            <img id="li_img" src="./assets/sci-fi-icon.svg" alt="Sci-fi icon" />
+            <p>Sci-fi</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="shooter" name="side_radio" type="radio" /><label
+            for="shooter"
+          >
+            <img
+              id="li_img"
+              src="./assets/shooter-icon.svg"
+              alt="Shooter icon"
+            />
+            <p>Shooter</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="social" name="side_radio" type="radio" /><label
+            for="social"
+          >
+            <img id="li_img" src="./assets/social-icon.svg" alt="Social icon" />
+            <p>Social</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="sport" name="side_radio" type="radio" /><label for="sport">
+            <img id="li_img" src="./assets/sport-icon.svg" alt="Sport icon" />
+            <p>Sports</p></label
+          >
+        </li>
+        <li class="side_radio">
+          <input id="strategy" name="side_radio" type="radio" /><label
+            for="strategy"
+          >
+            <img
+              id="li_img"
+              src="./assets/strategy-icon.svg"
+              alt="Strategy icon"
+            />
+            <p>Strategy</p>
+          </label>
+        </li>
+      </ul>
+    </aside>
+
+    <section id="games_list">
+    </section>
+
+    <script src="./js/script.js"></script>
     
-    <script src="js/script.js"></script>
-</body>
+  </body>
+  
 </html>
